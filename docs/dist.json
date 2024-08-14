@@ -7,7 +7,7 @@
     },
     "servers": [
         {
-            "url": "api.thestudioc.org"
+            "url": "https://api.thestudioc.org"
         }
     ],
     "paths": {
