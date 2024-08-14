@@ -1,12 +1,12 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "TheStudioC REST API",
+    "title": "The StudioC REST API",
     "description": "See https://github.com/TheStudioC/mes-api-docs for more information.",
     "version": "v1",
     "x-logo": {
-      "url": "https://thestudioc.org/wp-content/uploads/2021/01/StudioC-logo-2color-reversed.png",
-      "altText": "TheStudioC Logo"
+      "url": "https://raw.githubusercontent.com/TheStudioC/mes-api-docs/main/docs/logo.png",
+      "altText": "The StudioC Logo"
     }
   },
   "servers": [
@@ -148,10 +148,12 @@
         "tags": [
           "Badges"
         ],
+        "summary": "Returns badges defined.",
         "parameters": [
           {
             "name": "badgeType",
             "in": "query",
+            "description": "Next Step = 1, Milestone = 2",
             "schema": {
               "$ref": "#/components/schemas/BadgeType"
             }
@@ -167,10 +169,12 @@
         "tags": [
           "Badges"
         ],
+        "summary": "Returns badges defined.",
         "parameters": [
           {
             "name": "badgeType",
             "in": "query",
+            "description": "Next Step = 1, Milestone = 2",
             "schema": {
               "$ref": "#/components/schemas/BadgeType"
             }
@@ -775,7 +779,9 @@
         "tags": [
           "Poll"
         ],
+        "summary": "Submits a poll result",
         "requestBody": {
+          "description": "PollRequest submission object",
           "content": {
             "application/json": {
               "schema": {
@@ -1207,6 +1213,7 @@
         "properties": {
           "sourceId": {
             "type": "integer",
+            "description": "Source System Id",
             "format": "int64",
             "nullable": true
           },
@@ -1330,7 +1337,8 @@
             "nullable": true
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "description": "Sample docs"
       },
       "MessageSearch": {
         "type": "object",
