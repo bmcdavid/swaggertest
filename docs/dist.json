@@ -2,7 +2,7 @@
     "openapi": "3.0.1",
     "info": {
         "title": "TheStudioC REST API",
-        "description": "todo",
+        "description": "See https://github.com/bmcdavid/swaggertest for more information.",
         "version": "v1"
     },
     "servers": [
