@@ -5,7 +5,7 @@
         "description": "See https://github.com/TheStudioC/mes-api-docs for more information.",
         "version": "v1",
         "x-logo": {
-            "url": "https://raw.githubusercontent.com/bmcdavid/swaggertest/main/docs/logo.png",
+            "url": "https://raw.githubusercontent.com/thestudioc/mes-api-docs/main/docs/logo.png",
             "altText": "The StudioC Logo"
         }
     },
@@ -336,7 +336,7 @@
                     "Person"
                 ],
                 "summary": "Gets a members badges",
-                "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/).",
+                "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
                 "parameters": [
                     {
                         "name": "sourceId",
@@ -359,7 +359,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "OK",
+                        "description": "Person badges retrieved.",
                         "content": {
                             "application/json": {
                                 "schema": {
@@ -372,7 +372,7 @@
                         }
                     },
                     "500": {
-                        "description": "Internal Server Error",
+                        "description": "Oops! Can't complete the request now.",
                         "content": {
                             "application/json": {
                                 "schema": {
@@ -388,7 +388,7 @@
                     "Person"
                 ],
                 "summary": "Gets a members badges",
-                "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/).",
+                "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
                 "parameters": [
                     {
                         "name": "sourceId",
@@ -411,7 +411,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "OK",
+                        "description": "Person badges retrieved.",
                         "content": {
                             "application/json": {
                                 "schema": {
@@ -424,7 +424,7 @@
                         }
                     },
                     "500": {
-                        "description": "Internal Server Error",
+                        "description": "Oops! Can't complete the request now.",
                         "content": {
                             "application/json": {
                                 "schema": {
