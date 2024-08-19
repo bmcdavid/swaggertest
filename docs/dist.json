@@ -15,10 +15,13 @@
                 "tags": [
                     "Audience"
                 ],
+                "summary": "Gets an audience by name.",
+                "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
                 "parameters": [
                     {
                         "name": "name",
                         "in": "query",
+                        "description": "The audience name to retrieve.",
                         "schema": {
                             "type": "string"
                         }
@@ -26,7 +29,27 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "OK"
+                        "description": "Successful operation.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/AudienceResponse"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Oops! Can't complete the request now.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
                     }
                 }
             },
@@ -34,10 +57,13 @@
                 "tags": [
                     "Audience"
                 ],
+                "summary": "Gets an audience by name.",
+                "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
                 "parameters": [
                     {
                         "name": "name",
                         "in": "query",
+                        "description": "The audience name to retrieve.",
                         "schema": {
                             "type": "string"
                         }
@@ -45,7 +71,27 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "OK"
+                        "description": "Successful operation.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/AudienceResponse"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Oops! Can't complete the request now.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -55,10 +101,13 @@
                 "tags": [
                     "Audience"
                 ],
+                "summary": "Gets an audience by Id.",
+                "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
                 "parameters": [
                     {
                         "name": "audienceId",
                         "in": "path",
+                        "description": "The audience Id to retrieve.",
                         "required": true,
                         "schema": {
                             "type": "integer",
@@ -68,7 +117,20 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "OK"
+                        "description": "Successful operation.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/AudienceResponse"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Oops! Can't complete the request now."
                     }
                 }
             },
@@ -76,10 +138,13 @@
                 "tags": [
                     "Audience"
                 ],
+                "summary": "Gets an audience by Id.",
+                "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
                 "parameters": [
                     {
                         "name": "audienceId",
                         "in": "path",
+                        "description": "The audience Id to retrieve.",
                         "required": true,
                         "schema": {
                             "type": "integer",
@@ -89,7 +154,20 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "OK"
+                        "description": "Successful operation.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/AudienceResponse"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Oops! Can't complete the request now."
                     }
                 }
             }
@@ -99,10 +177,12 @@
                 "tags": [
                     "Audience"
                 ],
+                "summary": "Exports an audience to Mailchimp.",
                 "parameters": [
                     {
                         "name": "audienceId",
                         "in": "path",
+                        "description": "The audience Id.",
                         "required": true,
                         "schema": {
                             "type": "integer",
@@ -112,6 +192,7 @@
                     {
                         "name": "audienceName",
                         "in": "query",
+                        "description": "The audience name.",
                         "schema": {
                             "type": "string"
                         }
@@ -119,6 +200,7 @@
                     {
                         "name": "tagName",
                         "in": "query",
+                        "description": "The tag name.",
                         "schema": {
                             "type": "string"
                         }
@@ -126,6 +208,7 @@
                     {
                         "name": "isCreate",
                         "in": "query",
+                        "description": "Creates a list when true using the audience name, when false uses audience name to get existing listing.",
                         "schema": {
                             "type": "boolean"
                         }
@@ -133,7 +216,20 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "OK"
+                        "description": "Successful operation."
+                    },
+                    "400": {
+                        "description": "Failed operation.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Oops! Can't complete the request now."
                     }
                 }
             }
@@ -144,6 +240,7 @@
                     "Badges"
                 ],
                 "summary": "Returns badges list defined for tenant.",
+                "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
                 "parameters": [
                     {
                         "name": "badgeType",
@@ -156,7 +253,27 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "OK"
+                        "description": "Successful operation.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/BadgeResponse"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Oops! Can't complete the request now.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
                     }
                 }
             },
@@ -165,6 +282,7 @@
                     "Badges"
                 ],
                 "summary": "Returns badges list defined for tenant.",
+                "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
                 "parameters": [
                     {
                         "name": "badgeType",
@@ -177,7 +295,27 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "OK"
+                        "description": "Successful operation.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/BadgeResponse"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Oops! Can't complete the request now.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -187,9 +325,31 @@
                 "tags": [
                     "Dashboard"
                 ],
+                "summary": "Returns dashboard links defined for tenant.",
+                "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
                 "responses": {
                     "200": {
-                        "description": "OK"
+                        "description": "Successful operation.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/DashboardLinkResponse"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Oops! Can't complete the request now.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
                     }
                 }
             },
@@ -197,9 +357,31 @@
                 "tags": [
                     "Dashboard"
                 ],
+                "summary": "Returns dashboard links defined for tenant.",
+                "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
                 "responses": {
                     "200": {
-                        "description": "OK"
+                        "description": "Successful operation.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/DashboardLinkResponse"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Oops! Can't complete the request now.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -209,9 +391,20 @@
                 "tags": [
                     "Dashboard"
                 ],
+                "summary": "Returns dashboard settings defined for tenant.",
                 "responses": {
                     "200": {
-                        "description": "OK"
+                        "description": "Successful operation.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/DashboardSettingsModel"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Oops! Can't complete the request now."
                     }
                 }
             },
@@ -219,9 +412,20 @@
                 "tags": [
                     "Dashboard"
                 ],
+                "summary": "Returns dashboard settings defined for tenant.",
                 "responses": {
                     "200": {
-                        "description": "OK"
+                        "description": "Successful operation.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/DashboardSettingsModel"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Oops! Can't complete the request now."
                     }
                 }
             }
@@ -231,6 +435,8 @@
                 "tags": [
                     "Messages"
                 ],
+                "summary": "Gets active messages by Ids, these messages will contain unpersonalized information.",
+                "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -252,7 +458,27 @@
                 },
                 "responses": {
                     "200": {
-                        "description": "OK"
+                        "description": "Successful operation.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/MessageSearchResponse"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Oops! Can't complete the request now.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
                     }
                 }
             },
@@ -260,6 +486,8 @@
                 "tags": [
                     "Messages"
                 ],
+                "summary": "Gets active messages by Ids, these messages will contain unpersonalized information.",
+                "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -281,7 +509,27 @@
                 },
                 "responses": {
                     "200": {
-                        "description": "OK"
+                        "description": "Successful operation.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/MessageSearchResponse"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Oops! Can't complete the request now.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -291,10 +539,13 @@
                 "tags": [
                     "Person"
                 ],
+                "summary": "Gets a member by source Id.",
+                "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
                 "parameters": [
                     {
                         "name": "sourceId",
                         "in": "path",
+                        "description": "Person Source Id",
                         "required": true,
                         "schema": {
                             "type": "integer",
@@ -304,7 +555,27 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "OK"
+                        "description": "Successful operation.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/PersonResponse"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Oops! Can't complete the request now.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
                     }
                 }
             },
@@ -312,10 +583,13 @@
                 "tags": [
                     "Person"
                 ],
+                "summary": "Gets a member by source Id.",
+                "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
                 "parameters": [
                     {
                         "name": "sourceId",
                         "in": "path",
+                        "description": "Person Source Id",
                         "required": true,
                         "schema": {
                             "type": "integer",
@@ -325,7 +599,27 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "OK"
+                        "description": "Successful operation.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/PersonResponse"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Oops! Can't complete the request now.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -359,7 +653,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Person badges retrieved.",
+                        "description": "Successful operation.",
                         "content": {
                             "application/json": {
                                 "schema": {
@@ -411,7 +705,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Person badges retrieved.",
+                        "description": "Successful operation.",
                         "content": {
                             "application/json": {
                                 "schema": {
@@ -441,7 +735,9 @@
                 "tags": [
                     "Person"
                 ],
+                "summary": "Creates a new member for tenant.",
                 "requestBody": {
+                    "description": "New person's information. IMPORTANT: If a person with the source ID already exists, no record is created!",
                     "content": {
                         "application/json": {
                             "schema": {
@@ -462,11 +758,21 @@
                 },
                 "responses": {
                     "200": {
-                        "description": "OK",
+                        "description": "Successful operation.",
                         "content": {
                             "application/json": {
                                 "schema": {
                                     "$ref": "#/components/schemas/PersonResults"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Oops! Can't complete the request now.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
                                 }
                             }
                         }
@@ -479,6 +785,8 @@
                 "tags": [
                     "Person"
                 ],
+                "summary": "Finds a person with case insensitive exact on matching first name and last name. If email and/or phone are provided then they must match exactly as well.",
+                "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
                 "requestBody": {
                     "content": {
                         "multipart/form-data": {
@@ -518,7 +826,27 @@
                 },
                 "responses": {
                     "200": {
-                        "description": "OK"
+                        "description": "Successful operation.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/PersonFindResult"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Oops! Can't complete the request now.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -528,10 +856,13 @@
                 "tags": [
                     "Person"
                 ],
+                "summary": "Gets a members groups.",
+                "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
                 "parameters": [
                     {
                         "name": "sourceId",
                         "in": "path",
+                        "description": "Person Source Id",
                         "required": true,
                         "schema": {
                             "type": "integer",
@@ -541,7 +872,27 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "OK"
+                        "description": "Successful operation.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/GroupResponse"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Oops! Can't complete the request now.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
                     }
                 }
             },
@@ -549,10 +900,13 @@
                 "tags": [
                     "Person"
                 ],
+                "summary": "Gets a members groups.",
+                "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
                 "parameters": [
                     {
                         "name": "sourceId",
                         "in": "path",
+                        "description": "Person Source Id",
                         "required": true,
                         "schema": {
                             "type": "integer",
@@ -562,7 +916,27 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "OK"
+                        "description": "Successful operation.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/GroupResponse"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Oops! Can't complete the request now.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -572,10 +946,13 @@
                 "tags": [
                     "Person"
                 ],
+                "summary": "Gets a members messages by given ad type, limited by take size (default 6). Important, in cases of all ad type, the take size may not include all types depending on priority sorting.",
+                "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
                 "parameters": [
                     {
                         "name": "sourceId",
                         "in": "path",
+                        "description": "Person Source Id",
                         "required": true,
                         "schema": {
                             "type": "integer",
@@ -585,6 +962,7 @@
                     {
                         "name": "adtype",
                         "in": "path",
+                        "description": "Message type. Values: news, personal, all",
                         "required": true,
                         "schema": {
                             "type": "string"
@@ -593,6 +971,7 @@
                     {
                         "name": "take",
                         "in": "query",
+                        "description": "The number of messages to retrieve.",
                         "schema": {
                             "type": "integer",
                             "format": "int32",
@@ -602,7 +981,27 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "OK"
+                        "description": "Successful operation.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/DashboardMessageResponse"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Oops! Can't complete the request now.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -612,10 +1011,13 @@
                 "tags": [
                     "Person"
                 ],
+                "summary": "Gets an anonymous members messages limited by take size (default 6).",
+                "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
                 "parameters": [
                     {
                         "name": "take",
                         "in": "query",
+                        "description": "The number of messages to retrieve.",
                         "schema": {
                             "type": "integer",
                             "format": "int32",
@@ -625,7 +1027,27 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "OK"
+                        "description": "Successful operation.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/DashboardMessageResponse"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Oops! Can't complete the request now.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -635,10 +1057,13 @@
                 "tags": [
                     "Person"
                 ],
+                "summary": "Gets a members traits.",
+                "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
                 "parameters": [
                     {
                         "name": "sourceId",
                         "in": "path",
+                        "description": "Person Source Id",
                         "required": true,
                         "schema": {
                             "type": "integer",
@@ -648,7 +1073,27 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "OK"
+                        "description": "Successful operation.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/PersonTraitResponse"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Oops! Can't complete the request now.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
                     }
                 }
             },
@@ -656,10 +1101,13 @@
                 "tags": [
                     "Person"
                 ],
+                "summary": "Gets a members traits.",
+                "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
                 "parameters": [
                     {
                         "name": "sourceId",
                         "in": "path",
+                        "description": "Person Source Id",
                         "required": true,
                         "schema": {
                             "type": "integer",
@@ -669,7 +1117,27 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "OK"
+                        "description": "Successful operation.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/PersonTraitResponse"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Oops! Can't complete the request now.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -679,10 +1147,13 @@
                 "tags": [
                     "Person"
                 ],
+                "summary": "Gets a members available checkins.",
+                "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
                 "parameters": [
                     {
                         "name": "sourceId",
                         "in": "path",
+                        "description": "Person Source Id",
                         "required": true,
                         "schema": {
                             "type": "integer",
@@ -692,7 +1163,37 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "OK"
+                        "description": "Successful operation.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/CheckinResponse"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Failed operation.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Oops! Can't complete the request now.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -702,10 +1203,12 @@
                 "tags": [
                     "Person"
                 ],
+                "summary": "Saves a members checkin.",
                 "parameters": [
                     {
                         "name": "sourceId",
                         "in": "path",
+                        "description": "Person Source Id",
                         "required": true,
                         "schema": {
                             "type": "integer",
@@ -747,7 +1250,27 @@
                 },
                 "responses": {
                     "200": {
-                        "description": "OK"
+                        "description": "Successful operation."
+                    },
+                    "400": {
+                        "description": "Failed operation.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Oops! Can't complete the request now.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -757,10 +1280,12 @@
                 "tags": [
                     "Person"
                 ],
+                "summary": "Generates a token to allow members to view their dashboard when embedded in other applications.",
                 "parameters": [
                     {
                         "name": "sourceId",
                         "in": "path",
+                        "description": "Person Source Id",
                         "required": true,
                         "schema": {
                             "type": "integer",
@@ -770,7 +1295,24 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "OK"
+                        "description": "Successful operation.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Oops! Can't complete the request now.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -780,6 +1322,7 @@
                 "tags": [
                     "Person"
                 ],
+                "summary": "Generates a tracking token which can be applied to user actions.",
                 "requestBody": {
                     "content": {
                         "multipart/form-data": {
@@ -802,7 +1345,24 @@
                 },
                 "responses": {
                     "200": {
-                        "description": "OK"
+                        "description": "Successful operation.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Oops! Can't complete the request now.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -814,7 +1374,7 @@
                 ],
                 "summary": "Submits a poll result",
                 "requestBody": {
-                    "description": "PollRequest submission object",
+                    "description": "PollRequest submission",
                     "content": {
                         "application/json": {
                             "schema": {
@@ -835,7 +1395,34 @@
                 },
                 "responses": {
                     "200": {
-                        "description": "OK"
+                        "description": "Successful operation.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Failed operation.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Oops! Can't complete the request now.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -845,6 +1432,8 @@
                 "tags": [
                     "Poll"
                 ],
+                "summary": "Gets an HTML version of a poll for given member Id.",
+                "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
                 "requestBody": {
                     "content": {
                         "multipart/form-data": {
@@ -874,7 +1463,24 @@
                 },
                 "responses": {
                     "200": {
-                        "description": "OK"
+                        "description": "Successful operation.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Oops! Can't complete the request now.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -884,6 +1490,8 @@
                 "tags": [
                     "Poll"
                 ],
+                "summary": "Gets the results of a poll.",
+                "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
                 "requestBody": {
                     "content": {
                         "multipart/form-data": {
@@ -906,7 +1514,27 @@
                 },
                 "responses": {
                     "200": {
-                        "description": "OK"
+                        "description": "Successful operation.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/PollResults"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Oops! Can't complete the request now.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -916,6 +1544,7 @@
                 "tags": [
                     "Tracking"
                 ],
+                "summary": "Tracks dashboard view for given memberId.",
                 "requestBody": {
                     "content": {
                         "multipart/form-data": {
@@ -950,7 +1579,17 @@
                 },
                 "responses": {
                     "200": {
-                        "description": "OK"
+                        "description": "Successful operation."
+                    },
+                    "500": {
+                        "description": "Oops! Can't complete the request now.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -960,6 +1599,7 @@
                 "tags": [
                     "Tracking"
                 ],
+                "summary": "Tracks message view for given memberId.",
                 "requestBody": {
                     "content": {
                         "multipart/form-data": {
@@ -995,7 +1635,17 @@
                 },
                 "responses": {
                     "200": {
-                        "description": "OK"
+                        "description": "Successful operation."
+                    },
+                    "500": {
+                        "description": "Oops! Can't complete the request now.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -1005,6 +1655,7 @@
                 "tags": [
                     "Tracking"
                 ],
+                "summary": "Tracks badge view for given memberId.",
                 "requestBody": {
                     "content": {
                         "multipart/form-data": {
@@ -1040,7 +1691,17 @@
                 },
                 "responses": {
                     "200": {
-                        "description": "OK"
+                        "description": "Successful operation."
+                    },
+                    "500": {
+                        "description": "Oops! Can't complete the request now.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -1050,6 +1711,7 @@
                 "tags": [
                     "Tracking"
                 ],
+                "summary": "Tracks link for given memberId.",
                 "requestBody": {
                     "content": {
                         "multipart/form-data": {
@@ -1079,7 +1741,17 @@
                 },
                 "responses": {
                     "200": {
-                        "description": "OK"
+                        "description": "Successful operation."
+                    },
+                    "500": {
+                        "description": "Oops! Can't complete the request now.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -1089,6 +1761,7 @@
                 "tags": [
                     "Tracking"
                 ],
+                "summary": "Tracks dashboard view for authenticated user.",
                 "requestBody": {
                     "content": {
                         "multipart/form-data": {
@@ -1116,7 +1789,17 @@
                 },
                 "responses": {
                     "200": {
-                        "description": "OK"
+                        "description": "Successful operation."
+                    },
+                    "500": {
+                        "description": "Oops! Can't complete the request now.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -1126,6 +1809,7 @@
                 "tags": [
                     "Tracking"
                 ],
+                "summary": "Tracks message view for authenticated user.",
                 "requestBody": {
                     "content": {
                         "multipart/form-data": {
@@ -1154,7 +1838,17 @@
                 },
                 "responses": {
                     "200": {
-                        "description": "OK"
+                        "description": "Successful operation."
+                    },
+                    "500": {
+                        "description": "Oops! Can't complete the request now.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -1164,6 +1858,7 @@
                 "tags": [
                     "Tracking"
                 ],
+                "summary": "Tracks badge view for authenticated user.",
                 "requestBody": {
                     "content": {
                         "multipart/form-data": {
@@ -1192,7 +1887,17 @@
                 },
                 "responses": {
                     "200": {
-                        "description": "OK"
+                        "description": "Successful operation."
+                    },
+                    "500": {
+                        "description": "Oops! Can't complete the request now.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -1202,6 +1907,7 @@
                 "tags": [
                     "Tracking"
                 ],
+                "summary": "Tracks link for authenticated user.",
                 "requestBody": {
                     "content": {
                         "multipart/form-data": {
@@ -1224,7 +1930,17 @@
                 },
                 "responses": {
                     "200": {
-                        "description": "OK"
+                        "description": "Successful operation."
+                    },
+                    "500": {
+                        "description": "Oops! Can't complete the request now.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -1232,6 +1948,30 @@
     },
     "components": {
         "schemas": {
+            "AudienceResponse": {
+                "type": "object",
+                "properties": {
+                    "audienceId": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "audienceName": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "created": {
+                        "type": "string",
+                        "format": "date-time",
+                        "nullable": true
+                    },
+                    "modified": {
+                        "type": "string",
+                        "format": "date-time",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
             "BadgeResponse": {
                 "type": "object",
                 "properties": {
@@ -1329,6 +2069,51 @@
                 },
                 "additionalProperties": false
             },
+            "BadgeStyles": {
+                "type": "object",
+                "properties": {
+                    "borderColor": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "borderWidth": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "size": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "completeColor": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "notCompleteColor": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "popoverBGColor": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "popoverBodyColor": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "popoverHeadlineColor": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "popoverCTAColor": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "useModal": {
+                        "type": "boolean"
+                    }
+                },
+                "additionalProperties": false
+            },
             "BadgeType": {
                 "enum": [
                     0,
@@ -1338,6 +2123,81 @@
                 "type": "integer",
                 "description": "Badge Types: Next Step = 1, Milestone = 2",
                 "format": "int32"
+            },
+            "ButtonStyles": {
+                "type": "object",
+                "properties": {
+                    "backgroundColor": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "borderColor": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "borderWidth": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "borderRadius": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "display": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "CheckinResponse": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "name": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "eventName": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "messageText": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "button1Text": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "button1Value": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "button2Text": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "button2Value": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "button3Value": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "serviceTypes": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
             },
             "CreatePersonRequest": {
                 "type": "object",
@@ -1470,6 +2330,357 @@
                 "additionalProperties": false,
                 "description": "Creates a person record using the API"
             },
+            "DashboardLinkResponse": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "linkText": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "linkUrl": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "linkOrder": {
+                        "type": "integer",
+                        "format": "int32",
+                        "nullable": true
+                    },
+                    "showDesktopOnly": {
+                        "type": "boolean"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "DashboardMessageResponse": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "messageType": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "headline": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "image": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "videoLink": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "copyHtml": {
+                        "$ref": "#/components/schemas/HtmlString"
+                    },
+                    "linkText": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "linkUrl": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "interstitialEnabled": {
+                        "type": "boolean"
+                    },
+                    "interstitialHeadline": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "interstitialCopyHtml": {
+                        "$ref": "#/components/schemas/HtmlString"
+                    },
+                    "interstitialImage": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "interstitialLinkText": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "interstitialLinkUrl": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "interstitialVideoLink": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "poll": {
+                        "$ref": "#/components/schemas/PollResponse"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "DashboardSettingsModel": {
+                "type": "object",
+                "properties": {
+                    "greetingTextTypography": {
+                        "$ref": "#/components/schemas/TypographyStyles"
+                    },
+                    "sectionTitlesTypography": {
+                        "$ref": "#/components/schemas/TypographyStyles"
+                    },
+                    "messageTitlesTypography": {
+                        "$ref": "#/components/schemas/TypographyStyles"
+                    },
+                    "messageBodyTypography": {
+                        "$ref": "#/components/schemas/TypographyStyles"
+                    },
+                    "messageButtonTypography": {
+                        "$ref": "#/components/schemas/TypographyStyles"
+                    },
+                    "messageButtonStyles": {
+                        "$ref": "#/components/schemas/ButtonStyles"
+                    },
+                    "quickLinksTypography": {
+                        "$ref": "#/components/schemas/TypographyStyles"
+                    },
+                    "quickLinkButtonStyles": {
+                        "$ref": "#/components/schemas/ButtonStyles"
+                    },
+                    "nextStepStyles": {
+                        "$ref": "#/components/schemas/BadgeStyles"
+                    },
+                    "milestoneStyles": {
+                        "$ref": "#/components/schemas/BadgeStyles"
+                    },
+                    "headerImageStyles": {
+                        "$ref": "#/components/schemas/HeaderImageStyles"
+                    },
+                    "messageCardStyles": {
+                        "$ref": "#/components/schemas/ButtonStyles"
+                    },
+                    "profilePictureStyles": {
+                        "$ref": "#/components/schemas/ProfilePictureStyles"
+                    },
+                    "loginPagesInfo": {
+                        "$ref": "#/components/schemas/LoginPagesInfo"
+                    },
+                    "emailFormInfo": {
+                        "$ref": "#/components/schemas/EmailFormInfo"
+                    },
+                    "groupInterfaceInfo": {
+                        "$ref": "#/components/schemas/GroupInterfaceInfo"
+                    },
+                    "termsofServiceLink": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "privacyLink": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "editProfileLink": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "pageBgColor": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "cardLinkColor": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "cardBorderRadiusImageOnly": {
+                        "type": "boolean"
+                    },
+                    "modifiedDate": {
+                        "type": "string",
+                        "format": "date-time",
+                        "nullable": true
+                    },
+                    "lastModifiedBy": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "EmailFormInfo": {
+                "type": "object",
+                "properties": {
+                    "unsubscribeHeading": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "unsubscribeCopy": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "modifiedDate": {
+                        "type": "string",
+                        "format": "date-time",
+                        "nullable": true
+                    },
+                    "lastModifiedBy": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "smsPreferencesCopy": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "emailPreferencesCopy": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "GroupInterfaceInfo": {
+                "type": "object",
+                "properties": {
+                    "isActive": {
+                        "type": "boolean"
+                    },
+                    "groupTypeIds": {
+                        "type": "array",
+                        "items": {
+                            "type": "integer",
+                            "format": "int64"
+                        },
+                        "nullable": true
+                    },
+                    "badgeIds": {
+                        "type": "array",
+                        "items": {
+                            "type": "integer",
+                            "format": "int64"
+                        },
+                        "nullable": true
+                    },
+                    "hideBadges": {
+                        "type": "boolean"
+                    },
+                    "displayToMembers": {
+                        "type": "boolean"
+                    },
+                    "manageGroupUrl": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "GroupResponse": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "cmsGroupName": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "groupType": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "groupStatus": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "sourceId": {
+                        "type": "integer",
+                        "format": "int64",
+                        "nullable": true
+                    },
+                    "isLeader": {
+                        "type": "boolean"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "HeaderImageStyles": {
+                "type": "object",
+                "properties": {
+                    "backgroundColor": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "backgroundImage": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "height": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "HtmlString": {
+                "type": "object",
+                "properties": {
+                    "value": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "LoginPagesInfo": {
+                "type": "object",
+                "properties": {
+                    "memberWelcomeGreeting": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "memberVerificationGreeting": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "memberSignupUrl": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "memberVerificationSignupUrl": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "helpPageUrl": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "modifiedDate": {
+                        "type": "string",
+                        "format": "date-time",
+                        "nullable": true
+                    },
+                    "lastModifiedBy": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "MemberTypeResponse": {
+                "type": "object",
+                "properties": {
+                    "memberTypeId": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "memberTypeDescription": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
             "MessageSearch": {
                 "type": "object",
                 "properties": {
@@ -1478,6 +2689,320 @@
                         "items": {
                             "type": "integer",
                             "format": "int64"
+                        },
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "MessageSearchResponse": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "adTypeId": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "adStatusId": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "campaignId": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "audienceId": {
+                        "type": "integer",
+                        "format": "int64",
+                        "nullable": true
+                    },
+                    "title": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "image": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "headline": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "copy": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "linkText": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "linkUrl": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "interstitialEnabled": {
+                        "type": "boolean"
+                    },
+                    "interstitialImage": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "interstitialHeadline": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "interstitialCopy": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "interstitialLinkText": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "interstitialLinkUrl": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "startDate": {
+                        "type": "string",
+                        "format": "date-time",
+                        "nullable": true
+                    },
+                    "endDate": {
+                        "type": "string",
+                        "format": "date-time",
+                        "nullable": true
+                    },
+                    "priority1": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "priority2": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "lastPublished": {
+                        "type": "string",
+                        "format": "date-time",
+                        "nullable": true
+                    },
+                    "formData": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "videoData": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "scheduleData": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "PersonFamilyResponse": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "id": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "familyName": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "PersonFindResult": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "id": {
+                        "type": "integer",
+                        "description": "Person source Id",
+                        "format": "int64"
+                    },
+                    "personId": {
+                        "type": "integer",
+                        "description": "Person StudioC Id",
+                        "format": "int64"
+                    },
+                    "link": {
+                        "type": "string",
+                        "description": "Person Link for API data retrieval",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "PersonLocationResponse": {
+                "type": "object",
+                "properties": {
+                    "locationId": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "locationName": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "PersonResponse": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "personId": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "personFirstName": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "personMiddleName": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "personLastName": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "avatar": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "personAge": {
+                        "type": "integer",
+                        "format": "int32",
+                        "nullable": true
+                    },
+                    "personGender": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "maritalStatus": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "personPhone": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "personEmail": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "street": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "city": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "state": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "zip": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "employer": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "neighborhood": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "grade": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "sourceId": {
+                        "type": "integer",
+                        "format": "int64",
+                        "nullable": true
+                    },
+                    "memberType_Id": {
+                        "type": "integer",
+                        "format": "int64",
+                        "nullable": true
+                    },
+                    "isActive": {
+                        "type": "boolean",
+                        "nullable": true
+                    },
+                    "isStaff": {
+                        "type": "boolean",
+                        "nullable": true
+                    },
+                    "isDeceased": {
+                        "type": "boolean",
+                        "nullable": true
+                    },
+                    "personBirthday": {
+                        "type": "string",
+                        "format": "date-time",
+                        "nullable": true
+                    },
+                    "baptismDate": {
+                        "type": "string",
+                        "format": "date-time",
+                        "nullable": true
+                    },
+                    "marriageDate": {
+                        "type": "string",
+                        "format": "date-time",
+                        "nullable": true
+                    },
+                    "membershipDate": {
+                        "type": "string",
+                        "format": "date-time",
+                        "nullable": true
+                    },
+                    "created": {
+                        "type": "string",
+                        "format": "date-time",
+                        "nullable": true
+                    },
+                    "modified": {
+                        "type": "string",
+                        "format": "date-time",
+                        "nullable": true
+                    },
+                    "family": {
+                        "$ref": "#/components/schemas/PersonFamilyResponse"
+                    },
+                    "location": {
+                        "$ref": "#/components/schemas/PersonLocationResponse"
+                    },
+                    "memberType": {
+                        "$ref": "#/components/schemas/MemberTypeResponse"
+                    },
+                    "links": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "string",
+                            "nullable": true
                         },
                         "nullable": true
                     }
@@ -1503,11 +3028,72 @@
                 },
                 "additionalProperties": false
             },
+            "PersonTraitResponse": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "traitName": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "sourceId": {
+                        "type": "integer",
+                        "format": "int64",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
             "PhoneNumber": {
                 "type": "object",
                 "properties": {
                     "numberFormatted": {
                         "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "Poll": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "title": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "pollType": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "includeOther": {
+                        "type": "boolean"
+                    },
+                    "showResults": {
+                        "type": "boolean"
+                    },
+                    "submitButton": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "submitMsg": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "completed": {
+                        "type": "boolean"
+                    },
+                    "answers": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
                         "nullable": true
                     }
                 },
@@ -1532,6 +3118,144 @@
                         "nullable": true
                     },
                     "other": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "PollResponse": {
+                "type": "object",
+                "properties": {
+                    "poll": {
+                        "$ref": "#/components/schemas/Poll"
+                    },
+                    "results": {
+                        "$ref": "#/components/schemas/PollResults"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "PollResult": {
+                "type": "object",
+                "properties": {
+                    "value": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "count": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "percentage": {
+                        "type": "number",
+                        "format": "double"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "PollResults": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "answers": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/PollResult"
+                        },
+                        "nullable": true
+                    },
+                    "totalResponses": {
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "ProblemDetails": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "title": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "status": {
+                        "type": "integer",
+                        "format": "int32",
+                        "nullable": true
+                    },
+                    "detail": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "instance": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": {}
+            },
+            "ProfilePictureStyles": {
+                "type": "object",
+                "properties": {
+                    "borderColor": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "borderWidth": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "height": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "TypographyStyles": {
+                "type": "object",
+                "properties": {
+                    "color": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "fontFamily": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "fontSize": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "fontWeight": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "fontStyle": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "textTransform": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "textDecoration": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "letterSpacing": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "textAlign": {
                         "type": "string",
                         "nullable": true
                     }
