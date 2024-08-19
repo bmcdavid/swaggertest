@@ -336,6 +336,7 @@
                     "Person"
                 ],
                 "summary": "Gets a members badges",
+                "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/).",
                 "parameters": [
                     {
                         "name": "sourceId",
@@ -362,7 +363,10 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/BadgeResponse"
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/BadgeResponse"
+                                    }
                                 }
                             }
                         }
@@ -384,6 +388,7 @@
                     "Person"
                 ],
                 "summary": "Gets a members badges",
+                "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/).",
                 "parameters": [
                     {
                         "name": "sourceId",
@@ -410,7 +415,10 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/BadgeResponse"
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/BadgeResponse"
+                                    }
                                 }
                             }
                         }
