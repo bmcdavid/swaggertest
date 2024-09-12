@@ -58,7 +58,7 @@
                     "Audience"
                 ],
                 "summary": "Gets an audience by name.",
-                "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
+                "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.\r\n\nThis endpoint respects the ```Accept-Language``` header as described [here](https://thestudioc.github.io/mes-api-docs/accept-language)",
                 "parameters": [
                     {
                         "name": "name",
