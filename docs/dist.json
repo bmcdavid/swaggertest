@@ -12,9 +12,6 @@
   "servers": [
     {
       "url": "https://api.thestudioc.org"
-    },
-    {
-      "url": "https://localhost:58999/"
     }
   ],
   "paths": {
@@ -24,7 +21,7 @@
           "Audience"
         ],
         "summary": "Gets an audience by name.",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example. (Requires authentication)",
+        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
         "parameters": [
           {
             "name": "name",
@@ -75,7 +72,7 @@
         },
         "security": [
           {
-            "PolicyBasicAuthentication": [ ]
+            "Basic Authentication": [ ]
           }
         ]
       },
@@ -84,7 +81,7 @@
           "Audience"
         ],
         "summary": "Gets an audience by name.",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example. (Requires authentication)",
+        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
         "parameters": [
           {
             "name": "name",
@@ -135,7 +132,7 @@
         },
         "security": [
           {
-            "PolicyBasicAuthentication": [ ]
+            "Basic Authentication": [ ]
           }
         ]
       }
@@ -146,7 +143,7 @@
           "Audience"
         ],
         "summary": "Gets an audience by Id.",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example. (Requires authentication)",
+        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
         "parameters": [
           {
             "name": "audienceId",
@@ -187,7 +184,7 @@
         },
         "security": [
           {
-            "PolicyBasicAuthentication": [ ]
+            "Basic Authentication": [ ]
           }
         ]
       },
@@ -196,7 +193,7 @@
           "Audience"
         ],
         "summary": "Gets an audience by Id.",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example. (Requires authentication)",
+        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
         "parameters": [
           {
             "name": "audienceId",
@@ -237,7 +234,7 @@
         },
         "security": [
           {
-            "PolicyBasicAuthentication": [ ]
+            "Basic Authentication": [ ]
           }
         ]
       }
@@ -248,7 +245,6 @@
           "Audience"
         ],
         "summary": "Exports an audience to Mailchimp.",
-        "description": " (Requires authentication)",
         "parameters": [
           {
             "name": "audienceId",
@@ -310,7 +306,7 @@
         },
         "security": [
           {
-            "PolicyBasicAuthentication": [ ]
+            "Basic Authentication": [ ]
           }
         ]
       }
@@ -321,7 +317,7 @@
           "Badges"
         ],
         "summary": "Returns badges list defined for tenant.",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.\r\n\r\nThis endpoint respects the ```Accept-Language``` header as described [here](https://thestudioc.github.io/mes-api-docs/accept-language) (Requires authentication)",
+        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.\r\n\r\nThis endpoint respects the ```Accept-Language``` header as described [here](https://thestudioc.github.io/mes-api-docs/accept-language)",
         "parameters": [
           {
             "name": "badgeType",
@@ -372,7 +368,7 @@
         },
         "security": [
           {
-            "PolicyBasicAuthentication": [ ]
+            "Basic Authentication": [ ]
           }
         ]
       },
@@ -381,7 +377,7 @@
           "Badges"
         ],
         "summary": "Returns badges list defined for tenant.",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.\r\n\r\nThis endpoint respects the ```Accept-Language``` header as described [here](https://thestudioc.github.io/mes-api-docs/accept-language) (Requires authentication)",
+        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.\r\n\r\nThis endpoint respects the ```Accept-Language``` header as described [here](https://thestudioc.github.io/mes-api-docs/accept-language)",
         "parameters": [
           {
             "name": "badgeType",
@@ -432,7 +428,7 @@
         },
         "security": [
           {
-            "PolicyBasicAuthentication": [ ]
+            "Basic Authentication": [ ]
           }
         ]
       }
@@ -443,7 +439,7 @@
           "Dashboard"
         ],
         "summary": "Returns dashboard links defined for tenant.",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example. (Requires authentication)",
+        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
         "responses": {
           "200": {
             "description": "Successful operation.",
@@ -484,7 +480,7 @@
         },
         "security": [
           {
-            "PolicyBasicAuthentication": [ ]
+            "Basic Authentication": [ ]
           }
         ]
       },
@@ -493,7 +489,7 @@
           "Dashboard"
         ],
         "summary": "Returns dashboard links defined for tenant.",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example. (Requires authentication)",
+        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
         "responses": {
           "200": {
             "description": "Successful operation.",
@@ -534,7 +530,7 @@
         },
         "security": [
           {
-            "PolicyBasicAuthentication": [ ]
+            "Basic Authentication": [ ]
           }
         ]
       }
@@ -545,7 +541,6 @@
           "Dashboard"
         ],
         "summary": "Returns dashboard settings defined for tenant.",
-        "description": " (Requires authentication)",
         "responses": {
           "200": {
             "description": "Successful operation.",
@@ -568,7 +563,7 @@
         },
         "security": [
           {
-            "PolicyBasicAuthentication": [ ]
+            "Basic Authentication": [ ]
           }
         ]
       },
@@ -577,7 +572,6 @@
           "Dashboard"
         ],
         "summary": "Returns dashboard settings defined for tenant.",
-        "description": " (Requires authentication)",
         "responses": {
           "200": {
             "description": "Successful operation.",
@@ -600,7 +594,7 @@
         },
         "security": [
           {
-            "PolicyBasicAuthentication": [ ]
+            "Basic Authentication": [ ]
           }
         ]
       }
@@ -611,7 +605,7 @@
           "Messages"
         ],
         "summary": "Gets active messages by Ids, these messages will contain unpersonalized information.",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example. (Requires authentication)",
+        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -671,7 +665,7 @@
         },
         "security": [
           {
-            "PolicyBasicAuthentication": [ ]
+            "Basic Authentication": [ ]
           }
         ]
       },
@@ -680,7 +674,7 @@
           "Messages"
         ],
         "summary": "Gets active messages by Ids, these messages will contain unpersonalized information.",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example. (Requires authentication)",
+        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -740,7 +734,7 @@
         },
         "security": [
           {
-            "PolicyBasicAuthentication": [ ]
+            "Basic Authentication": [ ]
           }
         ]
       }
@@ -751,7 +745,7 @@
           "Person"
         ],
         "summary": "Gets a member by source Id.",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example. (Requires authentication)",
+        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
         "parameters": [
           {
             "name": "sourceId",
@@ -804,7 +798,7 @@
         },
         "security": [
           {
-            "PolicyBasicAuthentication": [ ]
+            "Basic Authentication": [ ]
           }
         ]
       },
@@ -813,7 +807,7 @@
           "Person"
         ],
         "summary": "Gets a member by source Id.",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example. (Requires authentication)",
+        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
         "parameters": [
           {
             "name": "sourceId",
@@ -866,7 +860,7 @@
         },
         "security": [
           {
-            "PolicyBasicAuthentication": [ ]
+            "Basic Authentication": [ ]
           }
         ]
       }
@@ -877,7 +871,7 @@
           "Person"
         ],
         "summary": "Gets a members badges",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.\r\n\r\nThis endpoint respects the ```Accept-Language``` header as described [here](https://thestudioc.github.io/mes-api-docs/accept-language) (Requires authentication)",
+        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.\r\n\r\nThis endpoint respects the ```Accept-Language``` header as described [here](https://thestudioc.github.io/mes-api-docs/accept-language)",
         "parameters": [
           {
             "name": "sourceId",
@@ -938,7 +932,7 @@
         },
         "security": [
           {
-            "PolicyBasicAuthentication": [ ]
+            "Basic Authentication": [ ]
           }
         ]
       },
@@ -947,7 +941,7 @@
           "Person"
         ],
         "summary": "Gets a members badges",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.\r\n\r\nThis endpoint respects the ```Accept-Language``` header as described [here](https://thestudioc.github.io/mes-api-docs/accept-language) (Requires authentication)",
+        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.\r\n\r\nThis endpoint respects the ```Accept-Language``` header as described [here](https://thestudioc.github.io/mes-api-docs/accept-language)",
         "parameters": [
           {
             "name": "sourceId",
@@ -1008,7 +1002,7 @@
         },
         "security": [
           {
-            "PolicyBasicAuthentication": [ ]
+            "Basic Authentication": [ ]
           }
         ]
       }
@@ -1019,7 +1013,6 @@
           "Person"
         ],
         "summary": "Creates a new member for tenant.",
-        "description": " (Requires authentication)",
         "requestBody": {
           "description": "New person's information. IMPORTANT: If a person with the source ID already exists, no record is created!",
           "content": {
@@ -1074,7 +1067,7 @@
         },
         "security": [
           {
-            "PolicyBasicAuthentication": [ ]
+            "Basic Authentication": [ ]
           }
         ]
       }
@@ -1085,7 +1078,7 @@
           "Person"
         ],
         "summary": "Finds a person with case insensitive exact on matching first name and last name. If email and/or phone are provided then they must match exactly as well.",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example. (Requires authentication)",
+        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
         "requestBody": {
           "content": {
             "multipart/form-data": {
@@ -1167,7 +1160,7 @@
         },
         "security": [
           {
-            "PolicyBasicAuthentication": [ ]
+            "Basic Authentication": [ ]
           }
         ]
       }
@@ -1178,7 +1171,7 @@
           "Person"
         ],
         "summary": "Gets a members groups.",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example. (Requires authentication)",
+        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
         "parameters": [
           {
             "name": "sourceId",
@@ -1231,7 +1224,7 @@
         },
         "security": [
           {
-            "PolicyBasicAuthentication": [ ]
+            "Basic Authentication": [ ]
           }
         ]
       },
@@ -1240,7 +1233,7 @@
           "Person"
         ],
         "summary": "Gets a members groups.",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example. (Requires authentication)",
+        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
         "parameters": [
           {
             "name": "sourceId",
@@ -1293,7 +1286,7 @@
         },
         "security": [
           {
-            "PolicyBasicAuthentication": [ ]
+            "Basic Authentication": [ ]
           }
         ]
       }
@@ -1304,7 +1297,7 @@
           "Person"
         ],
         "summary": "Gets a members messages by given ad type, limited by take size (default 6). Important, in cases of all ad type, the take size may not include all types depending on priority sorting.",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example. (Requires authentication)",
+        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
         "parameters": [
           {
             "name": "sourceId",
@@ -1376,7 +1369,7 @@
         },
         "security": [
           {
-            "PolicyBasicAuthentication": [ ]
+            "Basic Authentication": [ ]
           }
         ]
       }
@@ -1386,8 +1379,8 @@
         "tags": [
           "Person"
         ],
-        "summary": "Gets an anonymous members messages limited by take size (default 6). Anonymous messages may be retrieved without authentication but requests without authentication require an HTTP Header of 'dashboard-url' with value in format of 'https://thenameoftenant.thestudioc.org'!",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example. (No authentication required)",
+        "summary": "Gets an anonymous members messages limited by take size (default 6).",
+        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
         "parameters": [
           {
             "name": "take",
@@ -1397,6 +1390,15 @@
               "type": "integer",
               "format": "int32",
               "default": 6
+            }
+          },
+          {
+            "name": "dashboard-url",
+            "in": "header",
+            "description": "Tenant Application Url in form of https://tenantName.thestudioc.org",
+            "required": true,
+            "schema": {
+              "type": "string"
             }
           }
         ],
@@ -1446,7 +1448,7 @@
           "Person"
         ],
         "summary": "Gets a members traits.",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example. (Requires authentication)",
+        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
         "parameters": [
           {
             "name": "sourceId",
@@ -1499,7 +1501,7 @@
         },
         "security": [
           {
-            "PolicyBasicAuthentication": [ ]
+            "Basic Authentication": [ ]
           }
         ]
       },
@@ -1508,7 +1510,7 @@
           "Person"
         ],
         "summary": "Gets a members traits.",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example. (Requires authentication)",
+        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
         "parameters": [
           {
             "name": "sourceId",
@@ -1561,7 +1563,7 @@
         },
         "security": [
           {
-            "PolicyBasicAuthentication": [ ]
+            "Basic Authentication": [ ]
           }
         ]
       }
@@ -1572,7 +1574,7 @@
           "Person"
         ],
         "summary": "Gets a members available checkins.",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example. (Requires authentication)",
+        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
         "parameters": [
           {
             "name": "sourceId",
@@ -1640,7 +1642,7 @@
         },
         "security": [
           {
-            "PolicyBasicAuthentication": [ ]
+            "Basic Authentication": [ ]
           }
         ]
       }
@@ -1651,7 +1653,6 @@
           "Person"
         ],
         "summary": "Saves a members checkin.",
-        "description": " (Requires authentication)",
         "parameters": [
           {
             "name": "sourceId",
@@ -1736,7 +1737,7 @@
         },
         "security": [
           {
-            "PolicyBasicAuthentication": [ ]
+            "Basic Authentication": [ ]
           }
         ]
       }
@@ -1747,7 +1748,6 @@
           "Person"
         ],
         "summary": "Generates a token to allow members to view their dashboard when embedded in other applications.",
-        "description": " (Requires authentication)",
         "parameters": [
           {
             "name": "sourceId",
@@ -1809,7 +1809,7 @@
         },
         "security": [
           {
-            "PolicyBasicAuthentication": [ ]
+            "Basic Authentication": [ ]
           }
         ]
       }
@@ -1820,7 +1820,6 @@
           "Person"
         ],
         "summary": "Generates a tracking token which can be applied to user actions.",
-        "description": " (Requires authentication)",
         "requestBody": {
           "content": {
             "multipart/form-data": {
@@ -1891,7 +1890,7 @@
         },
         "security": [
           {
-            "PolicyBasicAuthentication": [ ]
+            "Basic Authentication": [ ]
           }
         ]
       }
@@ -1902,7 +1901,6 @@
           "Person"
         ],
         "summary": "Gets a members direct messages by given channel type, limited by page size (default 10).",
-        "description": " (Requires authentication)",
         "parameters": [
           {
             "name": "sourceId",
@@ -1970,7 +1968,7 @@
         },
         "security": [
           {
-            "PolicyBasicAuthentication": [ ]
+            "Basic Authentication": [ ]
           }
         ]
       }
@@ -1981,7 +1979,7 @@
           "Poll"
         ],
         "summary": "Submits a poll result",
-        "description": "Must include either 'pollresults' or 'fieldItems' array in the request body. FieldItems with fieldItemId included is preferred, \r\nand if fieldItems is included, pollresults will be ignored. If multiple languages are supported, must supply fieldItems.\r\nFieldItems can be obtained through '/api_ext/v1/Poll/Results' or '/api_ext/v1/Person/{sourceId}/Messages/{adtype}' endpoints. (Requires authentication)",
+        "description": "Must include either 'pollresults' or 'fieldItems' array in the request body. FieldItems with fieldItemId included is preferred, \r\nand if fieldItems is included, pollresults will be ignored. If multiple languages are supported, must supply fieldItems.\r\nFieldItems can be obtained through '/api_ext/v1/Poll/Results' or '/api_ext/v1/Person/{sourceId}/Messages/{adtype}' endpoints.",
         "requestBody": {
           "description": "PollRequest submission",
           "content": {
@@ -2051,7 +2049,7 @@
         },
         "security": [
           {
-            "PolicyBasicAuthentication": [ ]
+            "Basic Authentication": [ ]
           }
         ]
       }
@@ -2062,7 +2060,7 @@
           "Poll"
         ],
         "summary": "Gets an HTML version of a poll for given member Id.",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example. (Requires authentication)",
+        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
         "requestBody": {
           "content": {
             "multipart/form-data": {
@@ -2126,7 +2124,7 @@
         },
         "security": [
           {
-            "PolicyBasicAuthentication": [ ]
+            "Basic Authentication": [ ]
           }
         ]
       }
@@ -2137,7 +2135,7 @@
           "Poll"
         ],
         "summary": "Gets the results of a poll.",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example. (Requires authentication)",
+        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
         "requestBody": {
           "content": {
             "multipart/form-data": {
@@ -2199,7 +2197,7 @@
         },
         "security": [
           {
-            "PolicyBasicAuthentication": [ ]
+            "Basic Authentication": [ ]
           }
         ]
       }
@@ -2210,7 +2208,6 @@
           "Tracking"
         ],
         "summary": "Tracks dashboard view for given memberId.",
-        "description": " (Requires authentication)",
         "requestBody": {
           "content": {
             "multipart/form-data": {
@@ -2268,7 +2265,7 @@
         },
         "security": [
           {
-            "PolicyBasicAuthentication": [ ]
+            "Basic Authentication": [ ]
           }
         ]
       }
@@ -2279,7 +2276,6 @@
           "Tracking"
         ],
         "summary": "Tracks message view for given memberId.",
-        "description": " (Requires authentication)",
         "requestBody": {
           "content": {
             "multipart/form-data": {
@@ -2338,7 +2334,7 @@
         },
         "security": [
           {
-            "PolicyBasicAuthentication": [ ]
+            "Basic Authentication": [ ]
           }
         ]
       }
@@ -2349,7 +2345,6 @@
           "Tracking"
         ],
         "summary": "Tracks badge view for given memberId.",
-        "description": " (Requires authentication)",
         "requestBody": {
           "content": {
             "multipart/form-data": {
@@ -2408,7 +2403,7 @@
         },
         "security": [
           {
-            "PolicyBasicAuthentication": [ ]
+            "Basic Authentication": [ ]
           }
         ]
       }
@@ -2419,7 +2414,6 @@
           "Tracking"
         ],
         "summary": "Tracks link for given memberId.",
-        "description": " (Requires authentication)",
         "requestBody": {
           "content": {
             "multipart/form-data": {
@@ -2471,7 +2465,7 @@
         },
         "security": [
           {
-            "PolicyBasicAuthentication": [ ]
+            "Basic Authentication": [ ]
           }
         ]
       }
@@ -2482,7 +2476,6 @@
           "Tracking"
         ],
         "summary": "Tracks dashboard view for authenticated user.",
-        "description": " (Requires authentication)",
         "requestBody": {
           "content": {
             "multipart/form-data": {
@@ -2547,7 +2540,7 @@
         },
         "security": [
           {
-            "PolicyBearerTracking": [ ]
+            " Bearer Tracking Token": [ ]
           }
         ]
       }
@@ -2558,7 +2551,6 @@
           "Tracking"
         ],
         "summary": "Tracks message view for authenticated user.",
-        "description": " (Requires authentication)",
         "requestBody": {
           "content": {
             "multipart/form-data": {
@@ -2624,7 +2616,7 @@
         },
         "security": [
           {
-            "PolicyBearerTracking": [ ]
+            " Bearer Tracking Token": [ ]
           }
         ]
       }
@@ -2635,7 +2627,6 @@
           "Tracking"
         ],
         "summary": "Tracks badge view for authenticated user.",
-        "description": " (Requires authentication)",
         "requestBody": {
           "content": {
             "multipart/form-data": {
@@ -2701,7 +2692,7 @@
         },
         "security": [
           {
-            "PolicyBearerTracking": [ ]
+            " Bearer Tracking Token": [ ]
           }
         ]
       }
@@ -2712,7 +2703,6 @@
           "Tracking"
         ],
         "summary": "Tracks link for authenticated user.",
-        "description": " (Requires authentication)",
         "requestBody": {
           "content": {
             "multipart/form-data": {
@@ -2771,7 +2761,7 @@
         },
         "security": [
           {
-            "PolicyBearerTracking": [ ]
+            " Bearer Tracking Token": [ ]
           }
         ]
       }
@@ -4218,15 +4208,15 @@
       }
     },
     "securitySchemes": {
-      "PolicyBearerTracking": {
+      " Bearer Tracking Token": {
         "type": "http",
-        "description": "Input your Bearer token to access this API",
+        "description": "Obtained from using Basic Authentication on endpoint: /api_ext/v1/Person/get-tracking-token",
         "scheme": "bearer",
         "bearerFormat": "JWT"
       },
-      "PolicyBasicAuthentication": {
+      "Basic Authentication": {
         "type": "http",
-        "description": "Enter your username and password.",
+        "description": "Obtained from application instance Account Details / Integrations section",
         "scheme": "basic"
       }
     }
